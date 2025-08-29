@@ -74,7 +74,7 @@ class KluisTest {
     }
 
     @Test
-    void valideer_CodesKomenOvereen_RetourneertTrue() {
+    void valideerCode_CodesKomenOvereen_RetourneertTrue() {
         // arrange
         String geldigeCode = "3133";
         Kluis kluis = new Kluis(geldigeCode);
@@ -87,7 +87,7 @@ class KluisTest {
     @ParameterizedTest
     @NullAndEmptySource
     @ValueSource(strings = { "1222", "1286" })
-    void valideer_CodesVerschillen_RetourneertFalse(String code) {
+    void valideerCode_CodesVerschillen_RetourneertFalse(String code) {
         // arrange
         String geldigeCode = "1285";
         Kluis kluis = new Kluis(geldigeCode);
